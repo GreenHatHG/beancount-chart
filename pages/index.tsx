@@ -5,6 +5,7 @@ import * as echarts from 'echarts/core';
 import {PieChart}  from 'echarts/charts';
 import {CanvasRenderer} from 'echarts/renderers';
 import Grid from '@mui/material/Unstable_Grid2'
+import {Card} from "@mui/material";
 
 echarts.use(
     [PieChart, CanvasRenderer]
@@ -56,20 +57,16 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="p-8">
-      {/*    <Grid container>*/}
-      {/*        <Grid xs={8}>*/}
-                  <ReactEChartsCore
-                      echarts={echarts}
-                      option={option}
-                      notMerge={true}
-                      lazyUpdate={true}
-                  />
-              {/*</Grid>*/}
-          {/*</Grid>*/}
-          {/*<Card className="rounded-xl ">*/}
-
-          {/*</Card>*/}
+      <main className="p-8 grid grid-cols-3 gap-4">
+          <Card className="rounded-xl ">
+              <ReactEChartsCore
+                  echarts={echarts}
+                  option={option}
+                  notMerge={true}
+                  lazyUpdate={true}
+                  style={{position: "absolute", height: "100%", width: "100%", transform: "scale(1)"}}
+              />
+          </Card>
       </main>
     </div>
   )
