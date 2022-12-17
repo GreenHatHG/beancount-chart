@@ -3,13 +3,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "beancount": "npx ts-node scripts/bean-query.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/base": "^5.0.0-alpha.110",
     "@mui/material": "^5.11.0",
+    "csv-string": "^4.1.1",
     "echarts": "^5.4.1",
     "echarts-for-react": "^3.0.2",
     "next": "latest",
